@@ -1,6 +1,8 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import MagicButton from './ui/MagicButton'
+import { FaLocationArrow } from 'react-icons/fa'
 
 const Hero = () => {
   return (
@@ -26,6 +28,14 @@ const Hero = () => {
           <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
             Hi, I'm Kadi, a web designer and developer based in Barcelona.
           </p>
+          <a href='#work'>
+            <MagicButton 
+              title='Show My work'
+              icon={<FaLocationArrow />}
+              position='right'
+              handleClick={()=>{}}
+            />
+          </a>
         </div>
       </div>
    
