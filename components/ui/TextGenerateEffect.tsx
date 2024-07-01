@@ -33,7 +33,7 @@ export const TextGenerateEffect = ({
             {line.map((word, wordIndex) => (
               <motion.span
                 key={`${word}-${lineIndex}-${wordIndex}`}
-                className={`${lineIndex > 0 ? 'text-purple' : 'dark:text-white text-black '} opacity-0`}
+                className={`${lineIndex > 0 ? 'text-purple' : 'dark:text-white text-black '}`}
               >
                 {word}{" "}
               </motion.span>
