@@ -6,9 +6,12 @@ import { cn } from "@/utils/cn";
 export const TextGenerateEffect = ({
   words,
   className,
+  dark
 }: {
   words: string;
   className?: string;
+  dark?: boolean;
+
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split("/n").map(line => line.trim().split(" "));
@@ -33,7 +36,7 @@ export const TextGenerateEffect = ({
             {line.map((word, wordIndex) => (
               <motion.span
                 key={`${word}-${lineIndex}-${wordIndex}`}
-                className={`${lineIndex > 0 ? 'text-purple' : 'dark:text-white text-black '}`}
+                className={`${lineIndex > 0 && 'text-purple'} ${dark?' text-black':'text-white'}`}
               >
                 {word}{" "}
               </motion.span>
